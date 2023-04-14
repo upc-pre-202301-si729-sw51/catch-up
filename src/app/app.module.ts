@@ -15,10 +15,16 @@ import {MatCardModule} from "@angular/material/card";
 import {MatMenuModule} from "@angular/material/menu";
 import {NewsApiService} from "./news/services/news-api.service";
 import {LogoApiService} from "./core/services/logo-api.service";
+import { FooterContentComponent } from './news/components/footer-content/footer-content.component';
+import { NavComponent } from './news/components/nav/nav.component';
+import { MainContentComponent } from './news/components/main-content/main-content.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterContentComponent,
+    NavComponent,
+    MainContentComponent
   ],
   imports: [
     BrowserModule,
