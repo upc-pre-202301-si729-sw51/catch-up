@@ -1,1 +1,27 @@
-<p>main-content works!</p>
+<mat-card *ngFor="let article of articles" class="article-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{ article.title }}</mat-card-title>
+    </mat-card-title-group>
+  </mat-card-header>
+  <img mat-card-image
+       [src]="article.urlToImage"
+       [alt]="article.title"/>
+  <mat-card-content>
+    <p>{{ article.description }}</p>
+  </mat-card-content>
+  <mat-card-actions class="actions-section">
+    <a mat-button class="action-button" color="primary"
+       [href]="article.url"
+       target="_blank">More</a>
+    <span class="default-spacer"></span>
+    <a mat-button [href]="article.source.url"
+       target="_blank">{{ article.source.name }}</a>
+    <button mat-icon-button color="white" aria-label="Comments">
+      <mat-icon>comment</mat-icon>
+    </button>
+    <button mat-icon-button color="white" aria-label="Share">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>
