@@ -18,6 +18,7 @@ import {LogoApiService} from "./core/services/logo-api.service";
 import { FooterContentComponent } from './news/components/footer-content/footer-content.component';
 import { NavComponent } from './news/components/nav/nav.component';
 import { MainContentComponent } from './news/components/main-content/main-content.component';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MainContentComponent } from './news/components/main-content/main-conten
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    NgOptimizedImage,
   ],
   providers: [NewsApiService, LogoApiService],
   bootstrap: [AppComponent]

@@ -3,9 +3,10 @@
     <mat-toolbar>Sources</mat-toolbar>
     <mat-nav-list *ngFor="let source of sources"
                   (click)="onSourceSelected(source);drawer.toggle();">
-      <img mat-list-avatar [src]="source.urlToLogo"
+      <img matListItemAvatar [ngSrc]="source.urlToLogo"
+           width="60" height="60"
            [alt]="source.name">
-      <p mat-line><span>{{ source.name }}</span></p>
+      <p matListItemLine><span>{{ source.name }}</span></p>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
